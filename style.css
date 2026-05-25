@@ -2,12 +2,12 @@
 
 body {
     font-family: 'VT323', monospace;
-    background: #0a0a0a;
-    color: #d4d4c8;
+    background: #1a1a2e;
+    color: #f0f0f0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: radial-gradient(ellipse at center, #141414 0%, #0a0a0a 100%);
+    background-image: radial-gradient(ellipse at center, #252545 0%, #1a1a2e 100%);
 }
 
 /* ─── Setup ─── */
@@ -24,9 +24,9 @@ body {
 #setup h1 {
     font-family: 'Creepster', cursive;
     font-size: 2.5rem;
-    color: #a3e635;
+    color: #00ff88;
     text-align: center;
-    text-shadow: 0 0 20px rgba(163, 230, 53, 0.4);
+    text-shadow: 0 0 30px rgba(0, 255, 136, 0.6), 0 0 60px rgba(0, 255, 136, 0.3);
     letter-spacing: 0.05em;
 }
 
@@ -39,28 +39,28 @@ body {
 }
 
 .player-setup {
-    background: #141414;
+    background: #252545;
     padding: 1.25rem;
     border-radius: 12px;
-    border: 2px solid #3f3f3f;
+    border: 2px solid #4a4a7a;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    box-shadow: 0 4px 0 #000;
+    box-shadow: 0 4px 0 #0f0f1a;
 }
 
 .player-setup h3 {
     font-family: 'Zilla Slab Highlight', serif;
-    color: #a1a1aa;
+    color: #a0a0d0;
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
 .player-setup input {
-    background: #0a0a0a;
-    border: 2px solid #52525b;
-    color: #d4d4c8;
+    background: #1a1a2e;
+    border: 2px solid #6a6aaa;
+    color: #f0f0f0;
     padding: 0.75rem;
     border-radius: 6px;
     font-size: 1.1rem;
@@ -70,8 +70,8 @@ body {
 
 .player-setup input:focus {
     outline: none;
-    border-color: #a3e635;
-    box-shadow: 0 0 8px rgba(163, 230, 53, 0.3);
+    border-color: #00ff88;
+    box-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
 }
 
 .time-input-group {
@@ -88,14 +88,14 @@ body {
 }
 
 .time-input-group span {
-    color: #71717a;
+    color: #8888bb;
     font-size: 1rem;
 }
 
 /* ─── Buttons ─── */
 .btn {
     font-family: 'Press Start 2P', cursive;
-    background: #a3e635;
+    background: #00ff88;
     color: #0a0a0a;
     border: none;
     padding: 1rem 2rem;
@@ -106,57 +106,57 @@ body {
     transition: all 0.1s;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    box-shadow: 0 4px 0 #65a30d;
+    box-shadow: 0 4px 0 #00aa55;
     position: relative;
     top: 0;
 }
 
 .btn:hover {
-    background: #bef264;
+    background: #33ffaa;
     transform: translateY(-2px);
-    box-shadow: 0 6px 0 #65a30d;
+    box-shadow: 0 6px 0 #00aa55, 0 0 20px rgba(0, 255, 136, 0.4);
 }
 
 .btn:active {
     transform: translateY(2px);
-    box-shadow: 0 2px 0 #65a30d;
+    box-shadow: 0 2px 0 #00aa55;
 }
 
 .btn-small {
     padding: 0.5rem 1rem;
     font-size: 0.6rem;
     border-radius: 3px;
-    box-shadow: 0 3px 0 #000;
+    box-shadow: 0 3px 0 #0f0f1a;
 }
 
 .btn-secondary {
-    background: #52525b;
-    color: #d4d4c8;
-    box-shadow: 0 4px 0 #27272a;
+    background: #6a6aaa;
+    color: #f0f0f0;
+    box-shadow: 0 4px 0 #4a4a7a;
 }
 
 .btn-secondary:hover {
-    background: #71717a;
-    box-shadow: 0 6px 0 #27272a;
+    background: #8888dd;
+    box-shadow: 0 6px 0 #4a4a7a, 0 0 15px rgba(136, 136, 221, 0.4);
 }
 
 .btn-secondary:active {
-    box-shadow: 0 2px 0 #27272a;
+    box-shadow: 0 2px 0 #4a4a7a;
 }
 
 .btn-success {
-    background: #22c55e;
+    background: #00ccff;
     color: #000;
-    box-shadow: 0 4px 0 #15803d;
+    box-shadow: 0 4px 0 #0088aa;
 }
 
 .btn-success:hover {
-    background: #4ade80;
-    box-shadow: 0 6px 0 #15803d;
+    background: #33ddff;
+    box-shadow: 0 6px 0 #0088aa, 0 0 15px rgba(0, 204, 255, 0.4);
 }
 
 .btn-success:active {
-    box-shadow: 0 2px 0 #15803d;
+    box-shadow: 0 2px 0 #0088aa;
 }
 
 /* ─── Game ─── */
@@ -170,17 +170,21 @@ body {
 
 #announcement {
     display: none;
-    background: #7f1d1d;
-    color: #fca5a5;
-    padding: 0.75rem 1rem;
-    border-radius: 4px;
+    background: #ffff00;
+    color: #000000;
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
     text-align: center;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     animation: slideDown 0.3s ease;
     cursor: pointer;
-    font-family: 'VT323', monospace;
-    border: 2px solid #991b1b;
+    font-family: 'Press Start 2P', cursive;
+    border: 4px solid #000000;
+    box-shadow: 0 0 40px rgba(255, 255, 0, 0.8), 0 6px 0 #000000;
+    text-shadow: none;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
 }
 
 @keyframes slideDown {
@@ -196,7 +200,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(26, 26, 46, 0.95);
     z-index: 9999;
     justify-content: center;
     align-items: center;
@@ -214,12 +218,12 @@ body {
 }
 
 .overlay-box {
-    background: linear-gradient(180deg, #2a0a0a 0%, #450a0a 100%);
-    border: 4px solid #7f1d1d;
+    background: linear-gradient(180deg, #3a0a1a 0%, #5a0a1a 100%);
+    border: 4px solid #ff2244;
     border-radius: 8px;
     padding: 3rem 3.5rem;
     text-align: center;
-    box-shadow: 0 0 60px rgba(220, 38, 38, 0.6), inset 0 0 40px rgba(0,0,0,0.5);
+    box-shadow: 0 0 80px rgba(255, 34, 68, 0.7), inset 0 0 40px rgba(0,0,0,0.3);
     animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     max-width: 90vw;
     position: relative;
@@ -249,7 +253,7 @@ body {
     font-size: 4rem;
     margin-bottom: 1rem;
     animation: skullBob 2s ease-in-out infinite;
-    filter: drop-shadow(0 0 15px rgba(220, 38, 38, 0.6));
+    filter: drop-shadow(0 0 20px rgba(255, 34, 68, 0.8));
 }
 
 @keyframes skullBob {
@@ -260,24 +264,24 @@ body {
 .overlay-box h2 {
     font-family: 'Zilla Slab Highlight', serif;
     font-size: 2.5rem;
-    color: #fca5a5;
+    color: #ff88aa;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 0.5rem;
-    text-shadow: 0 0 20px rgba(220, 38, 38, 0.8);
+    text-shadow: 0 0 30px rgba(255, 34, 68, 0.9);
 }
 
 .overlay-box p {
     font-family: 'Press Start 2P', cursive;
     font-size: 1.1rem;
-    color: #ef4444;
+    color: #ff5577;
     font-weight: 400;
     line-height: 1.8;
 }
 
 .overlay-hint {
     margin-top: 2rem;
-    color: #52525b;
+    color: #8888bb;
     font-size: 1rem;
     font-family: 'VT323', monospace;
     text-transform: uppercase;
@@ -293,9 +297,9 @@ body {
 
 .game-header h2 {
     font-family: 'Zilla Slab Highlight', serif;
-    color: #a3e635;
+    color: #00ff88;
     font-size: 1.6rem;
-    text-shadow: 0 0 15px rgba(163, 230, 53, 0.3);
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
 }
 
 /* ─── Game Grid ─── */
@@ -312,8 +316,8 @@ body {
 
 /* ─── Tombstone Cards ─── */
 .player-card {
-    background: #171717;
-    border: 3px solid #3f3f3f;
+    background: #252545;
+    border: 3px solid #4a4a7a;
     border-radius: 24px 24px 6px 6px;
     padding: 1.5rem;
     display: flex;
@@ -327,35 +331,35 @@ body {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     min-height: 240px;
-    box-shadow: 0 6px 0 #000, inset 0 1px 0 rgba(255,255,255,0.05);
+    box-shadow: 0 6px 0 #0f0f1a, inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 .player-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 0 #000, inset 0 1px 0 rgba(255,255,255,0.05);
+    box-shadow: 0 8px 0 #0f0f1a, inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 /* Card States */
 .player-card.ready {
-    border-color: #3f3f3f;
-    background: #171717;
+    border-color: #4a4a7a;
+    background: #252545;
 }
 .player-card.running {
-    border-color: #65a30d;
-    background: #1a2e05;
-    box-shadow: 0 0 25px rgba(163, 230, 53, 0.15), 0 6px 0 #000;
+    border-color: #00ff88;
+    background: #0a2a1a;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.25), 0 6px 0 #0f0f1a;
 }
 .player-card.paused {
-    border-color: #a16207;
-    background: #281c0a;
-    box-shadow: 0 6px 0 #000;
+    border-color: #ffaa00;
+    background: #2a200a;
+    box-shadow: 0 6px 0 #0f0f1a;
 }
 .player-card.finished {
-    border-color: #7f1d1d;
-    background: #2a0a0a;
+    border-color: #ff2244;
+    background: #2a0a14;
     cursor: default;
-    box-shadow: 0 6px 0 #000;
-    opacity: 0.85;
+    box-shadow: 0 6px 0 #0f0f1a;
+    opacity: 0.9;
 }
 .player-card.finished:hover {
     transform: none;
@@ -364,18 +368,18 @@ body {
 /* ─── 10-Second Grave Danger ─── */
 @keyframes dangerPulse {
     0%, 100% {
-        border-color: #991b1b;
-        box-shadow: 0 0 15px rgba(153, 27, 27, 0.5), inset 0 0 20px rgba(153, 27, 27, 0.1);
+        border-color: #ff2244;
+        box-shadow: 0 0 20px rgba(255, 34, 68, 0.6), inset 0 0 25px rgba(255, 34, 68, 0.15);
     }
     50% {
-        border-color: #dc2626;
-        box-shadow: 0 0 40px rgba(220, 38, 38, 0.9), inset 0 0 30px rgba(220, 38, 38, 0.2);
+        border-color: #ff5577;
+        box-shadow: 0 0 50px rgba(255, 34, 68, 1), inset 0 0 40px rgba(255, 34, 68, 0.3);
     }
 }
 
 @keyframes textFlicker {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
+    50% { opacity: 0.3; }
 }
 
 .player-card.danger {
@@ -383,9 +387,9 @@ body {
 }
 
 .player-card.danger .timer-display {
-    color: #ef4444;
+    color: #ff5577;
     animation: textFlicker 0.5s ease-in-out infinite;
-    text-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+    text-shadow: 0 0 20px rgba(255, 85, 119, 1);
 }
 
 /* Card Inner Layout */
@@ -398,8 +402,8 @@ body {
 }
 
 .player-number {
-    background: #27272a;
-    color: #a1a1aa;
+    background: #4a4a7a;
+    color: #d0d0f0;
     width: 32px;
     height: 32px;
     display: flex;
@@ -410,24 +414,25 @@ body {
     font-weight: 800;
     font-family: 'Press Start 2P', cursive;
     font-size: 0.65rem;
-    border: 2px solid #3f3f3f;
+    border: 2px solid #6a6aaa;
 }
 
 .player-card.running .player-number {
-    background: #65a30d;
+    background: #00ff88;
     color: #000;
-    border-color: #a3e635;
-    box-shadow: 0 0 10px rgba(163, 230, 53, 0.5);
+    border-color: #33ffaa;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.7);
 }
 .player-card.paused .player-number {
-    background: #a16207;
+    background: #ffaa00;
     color: #000;
-    border-color: #facc15;
+    border-color: #ffcc33;
+    box-shadow: 0 0 10px rgba(255, 170, 0, 0.5);
 }
 .player-card.finished .player-number {
-    background: #7f1d1d;
-    color: #fca5a5;
-    border-color: #ef4444;
+    background: #ff2244;
+    color: #ffffff;
+    border-color: #ff5577;
 }
 
 .player-name {
@@ -437,7 +442,7 @@ body {
     text-align: center;
     word-break: break-word;
     margin-top: 1.5rem;
-    color: #d4d4c8;
+    color: #f0f0f0;
     letter-spacing: 0.05em;
 }
 
@@ -446,14 +451,14 @@ body {
     font-size: 2.2rem;
     font-weight: 400;
     font-variant-numeric: tabular-nums;
-    color: #a1a1aa;
+    color: #a0a0d0;
     line-height: 1.6;
     margin: 0.5rem 0;
 }
 
-.player-card.running .timer-display { color: #a3e635; }
-.player-card.paused .timer-display { color: #facc15; }
-.player-card.finished .timer-display { color: #f87171; }
+.player-card.running .timer-display { color: #00ff88; }
+.player-card.paused .timer-display { color: #ffcc33; }
+.player-card.finished .timer-display { color: #ff5577; }
 
 .status-text {
     font-family: 'VT323', monospace;
@@ -461,12 +466,12 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-weight: 400;
-    color: #52525b;
+    color: #6a6aaa;
 }
 
-.player-card.running .status-text { color: #a3e635; }
-.player-card.paused .status-text { color: #facc15; }
-.player-card.finished .status-text { color: #f87171; }
+.player-card.running .status-text { color: #00ff88; }
+.player-card.paused .status-text { color: #ffcc33; }
+.player-card.finished .status-text { color: #ff5577; }
 
 .card-actions {
     display: flex;
@@ -487,9 +492,9 @@ body {
 }
 
 .replace-form input[type="text"] {
-    background: #0a0a0a;
-    border: 2px solid #a3e635;
-    color: #d4d4c8;
+    background: #1a1a2e;
+    border: 2px solid #00ff88;
+    color: #f0f0f0;
     padding: 0.5rem;
     border-radius: 6px;
     font-size: 1.1rem;
@@ -505,9 +510,9 @@ body {
 }
 
 .time-row input {
-    background: #0a0a0a;
-    border: 2px solid #52525b;
-    color: #d4d4c8;
+    background: #1a1a2e;
+    border: 2px solid #6a6aaa;
+    color: #f0f0f0;
     padding: 0.5rem;
     border-radius: 6px;
     font-size: 1.1rem;
@@ -519,18 +524,18 @@ body {
 
 .time-row input:focus {
     outline: none;
-    border-color: #a3e635;
+    border-color: #00ff88;
 }
 
 .time-row span {
-    color: #71717a;
+    color: #8888bb;
     font-size: 1rem;
     font-family: 'VT323', monospace;
 }
 
 .replace-form .hint-text {
     font-size: 0.9rem;
-    color: #52525b;
+    color: #6a6aaa;
     font-family: 'VT323', monospace;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -538,7 +543,7 @@ body {
 
 .keyboard-hint {
     text-align: center;
-    color: #3f3f3f;
+    color: #6a6aaa;
     font-size: 1rem;
     padding: 0.5rem;
     font-family: 'VT323', monospace;
@@ -547,12 +552,12 @@ body {
 }
 
 .keyboard-hint kbd {
-    background: #171717;
-    color: #a3e635;
+    background: #252545;
+    color: #00ff88;
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     font-family: 'Press Start 2P', cursive;
     font-size: 0.6rem;
-    border: 2px solid #3f3f3f;
-    box-shadow: 0 3px 0 #000;
+    border: 2px solid #4a4a7a;
+    box-shadow: 0 3px 0 #0f0f1a;
 }
